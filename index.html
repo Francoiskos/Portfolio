@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- ==================================================
+         01 - CONFIGURATION DU DOCUMENT
+         ================================================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de développeur web en formation, à la recherche d'un stage."
+    />
+    <title>Mon Portfolio | Développeur Web</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ==================================================
+         02 - EN-TÊTE ET NAVIGATION
+         ================================================== -->
+    <header class="header">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="#accueil" class="logo">&lt;Dev en formation/&gt;</a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="menu-principal">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#parcours">Parcours</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+<!-- ==================================================
+     03 - ACCUEIL PANORAMIQUE
+     ================================================== -->
+
+<section id="accueil">
+  <div class="hero-container">
+
+    <!-- 03.1 - PRÉSENTATION À GAUCHE -->
+    <div class="hero-content">
+
+      <p class="intro">Bienvenue sur mon portfolio</p>
+
+      <h1>
+        Salut, moi c'est
+        <span class="highlight">François</span>
+      </h1>
+
+      <h2>Développeur Web et Web Mobile en formation</h2>
+
+      <p class="description">
+        Passionné par le développement web, je suis actuellement en
+        reconversion professionnelle après plus de 20 ans d'expérience
+        dans le secteur automobile. Je recherche un stage pour mettre
+        mes compétences en pratique et continuer à apprendre.
+      </p>
+
+      <!-- 03.2 - BOUTONS -->
+      <div class="hero-buttons">
+        <a href="#projets" class="btn-primary">
+          Découvrir mes projets
+        </a>
+
+        <a href="#contact" class="btn-secondary">
+          Me contacter
+        </a>
+      </div>
+
+      <!-- 03.3 - INFORMATIONS RAPIDES -->
+      <div class="hero-infos">
+        <span>Formation DWWM</span>
+        <span>Passionné d'informatique</span>
+        <span>Recherche de stage</span>
+      </div>
+
+    </div>
+    <!-- FIN DE HERO-CONTENT -->
+
+    <!-- 03.4 - PORTRAIT À DROITE -->
+    <div class="hero-visual">
+      <div class="portrait-frame">
+        <img
+          src="assets/images/portrait-profil.jpg"
+          alt="Portrait de François"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+      <!-- ==================================================
+           04 - STRUCTURE GÉNÉRALE DES SECTIONS
+           (Les styles communs sont définis dans le CSS.)
+           ================================================== -->
+
+      <!-- ==================================================
+           05 - À PROPOS
+           ================================================== -->
+      <section id="apropos">
+        <div class="about-container">
+          <!-- 05.1 - En-tête -->
+          <div class="about-header">
+            <span class="about-label">À PROPOS</span>
+            <h2>À propos de moi</h2>
+            <span class="about-underline" aria-hidden="true"></span>
+          </div>
+
+          <!-- 05.2 - Présentation et cartes -->
+          <div class="about-grid">
+            <!-- 05.3 - Présentation -->
+            <div class="about-presentation">
+              <h3>
+                Une reconversion guidée par la
+                <span>passion de l'informatique</span>
+              </h3>
+              <p>
+                Je m'appelle <strong>François Kosnansky</strong>. Je suis
+                actuellement en formation
+                <strong>Développeur Web et Web Mobile (DWWM)</strong>.
+              </p>
+              <p>
+                Après plus de 20 ans d'expérience dans le secteur automobile,
+                j'ai décidé de me reconvertir professionnellement pour me
+                consacrer à ma passion pour l'informatique.
+              </p>
+              <p>
+                Curieux et motivé, je développe mes compétences en HTML, CSS,
+                JavaScript, PHP et WordPress à travers différents projets.
+              </p>
+              <p>
+                Mon expérience professionnelle m'a apporté rigueur, autonomie,
+                adaptabilité et esprit d'équipe.
+              </p>
+              <div class="about-objective">
+                <span class="objective-icon" aria-hidden="true">◎</span>
+                <p>
+                  Je recherche actuellement un
+                  <strong>stage en développement web</strong>
+                  pour mettre mes compétences en pratique et continuer à
+                  apprendre.
+                </p>
+              </div>
+            </div>
+
+            <!-- 05.4 - Cartes de présentation -->
+            <div class="about-cards">
+              <article class="about-card">
+                <div class="about-card-icon" aria-hidden="true">▣</div>
+                <div class="about-card-content">
+                  <h3>Expérience professionnelle</h3>
+                  <h4>+ de 20 ans dans le secteur automobile</h4>
+                  <p>
+                    Une solide expérience qui m'a apporté rigueur, autonomie et
+                    sens du travail en équipe.
+                  </p>
+                </div>
+              </article>
+
+              <article class="about-card">
+                <div class="about-card-icon" aria-hidden="true">🎓</div>
+                <div class="about-card-content">
+                  <h3>Formation</h3>
+                  <h4>Développeur Web et Web Mobile (DWWM)</h4>
+                  <p>
+                    Une formation pour concevoir et développer des applications
+                    web modernes et responsives.
+                  </p>
+                </div>
+              </article>
+
+              <article class="about-card">
+                <div class="about-card-icon" aria-hidden="true">🚀</div>
+                <div class="about-card-content">
+                  <h3>Objectif</h3>
+                  <h4>Recherche de stage</h4>
+                  <p>
+                    Mettre mes compétences en pratique, découvrir le milieu
+                    professionnel du développement web et continuer à
+                    progresser.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================
+     06 - SECTION COMPÉTENCES
+================================================== -->
+
+      <section id="competences">
+        <div class="skills-container">
+          <!-- 06.1 - En-tête -->
+          <div class="skills-header">
+            <span class="skills-label">COMPÉTENCES</span>
+
+            <h2>Mes compétences</h2>
+
+            <span class="skills-underline"></span>
+
+            <p>
+              Les technologies que j'utilise pour concevoir et développer des
+              sites et applications web modernes et responsives.
+            </p>
+          </div>
+
+          <!-- 06.2 - Grille des compétences -->
+          <ul class="skills-list">
+            <!-- HTML5 -->
+            <li class="skill-card">
+              <img
+                src="assets/images/icons/html.jpeg"
+                alt=""
+                class="skill-icon"
+              />
+
+              <div class="skill-content">
+                <h3>HTML5</h3>
+                <p>Structure et sémantique des pages web.</p>
+                <span class="skill-tag">Structure HTML</span>
+              </div>
+            </li>
+
+            <!-- CSS3 -->
+            <li class="skill-card">
+              <img
+                src="assets/images/icons/css.jpeg"
+                alt=""
+                class="skill-icon"
+              />
+
+              <div class="skill-content">
+                <h3>CSS3</h3>
+                <p>Mise en forme, Flexbox, Grid et interfaces responsives.</p>
+                <span class="skill-tag">Responsive design</span>
+              </div>
+            </li>
+
+            <!-- JavaScript -->
+            <li class="skill-card">
+              <img
+                src="assets/images/icons/js.jpeg"
+                alt=""
+                class="skill-icon"
+              />
+
+              <div class="skill-content">
+                <h3>JavaScript</h3>
+                <p>Dynamisme et interactivité des pages web.</p>
+                <span class="skill-tag">DOM et événements</span>
+              </div>
+            </li>
+
+            <!-- PHP -->
+            <li class="skill-card">
+              <img
+                src="assets/images/icons/php.jpeg"
+                alt=""
+                class="skill-icon"
+              />
+
+              <div class="skill-content">
+                <h3>PHP</h3>
+                <p>Développement côté serveur et traitement des données.</p>
+                <span class="skill-tag">Back-end</span>
+              </div>
+            </li>
+
+            <!-- Symfony -->
+            <li class="skill-card">
+              <img
+                src="assets/images/icons/symfony.jpeg"
+                alt=""
+                class="skill-icon"
+              />
+
+              <div class="skill-content">
+                <h3>Symfony</h3>
+                <p>
+                  Découverte du framework PHP pour développer des applications
+                  web.
+                </p>
+                <span class="skill-tag">Framework PHP</span>
+              </div>
+            </li>
+
+            <!-- WordPress -->
+            <li class="skill-card">
+              <img
+                src="assets/images/icons/wordpress.jpeg"
+                alt=""
+                class="skill-icon"
+              />
+
+              <div class="skill-content">
+                <h3>WordPress</h3>
+                <p>Création et personnalisation de sites web.</p>
+                <span class="skill-tag">CMS</span>
+              </div>
+            </li>
+          </ul>
+
+          <!-- 06.3 - Compétences complémentaires -->
+          <div class="skills-extra" aria-label="Compétences complémentaires">
+            <span>Développement web</span>
+            <span>Responsive design</span>
+            <span>Bases de données</span>
+            <span>Git / GitHub</span>
+            <span>Bonnes pratiques</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================
+     07 - SECTION PROJETS
+================================================== -->
+
+      <section id="projets">
+        <div class="projects-container">
+          <!-- 07.1 - En-tête -->
+          <div class="projects-header">
+            <span class="projects-label">PROJETS</span>
+            <h2>Mes projets</h2>
+            <span class="projects-underline"></span>
+
+            <p>
+              Découvrez les applications que je prévois de réaliser pour mettre
+              en pratique mes compétences en développement web.
+            </p>
+          </div>
+
+          <!-- 07.2 - Grille des projets -->
+          <div class="projects-grid">
+            <!-- Projet 1 : Gestionnaire de tâches -->
+            <article class="project-card">
+              <div class="project-preview project-preview--tasks">
+                <span class="project-status">À venir</span>
+                <span class="project-preview-icon" aria-hidden="true">☑</span>
+                <span>Gestionnaire de tâches</span>
+              </div>
+
+              <div class="project-content">
+                <h3>Gestionnaire de tâches</h3>
+
+                <p>
+                  Une application pour ajouter, modifier, terminer et supprimer
+                  des tâches au quotidien.
+                </p>
+
+                <ul class="project-tech" aria-label="Technologies prévues">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+
+                <div class="project-links">
+                  <span class="project-button project-button--primary">
+                    Bientôt disponible
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Projet 2 : Application météo -->
+            <article class="project-card">
+              <div class="project-preview project-preview--weather">
+                <span class="project-status">À venir</span>
+                <span class="project-preview-icon" aria-hidden="true">☀</span>
+                <span>Application météo</span>
+              </div>
+
+              <div class="project-content">
+                <h3>Application météo</h3>
+
+                <p>
+                  Une application permettant de rechercher une ville et de
+                  consulter sa météo grâce à une API.
+                </p>
+
+                <ul class="project-tech" aria-label="Technologies prévues">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>API</li>
+                </ul>
+
+                <div class="project-links">
+                  <span class="project-button project-button--primary">
+                    Bientôt disponible
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Projet 3 : Catalogue de films -->
+            <article class="project-card">
+              <div class="project-preview project-preview--movies">
+                <span class="project-status">À venir</span>
+                <span class="project-preview-icon" aria-hidden="true">▣</span>
+                <span>Catalogue de films</span>
+              </div>
+
+              <div class="project-content">
+                <h3>Catalogue de films</h3>
+
+                <p>
+                  Une application pour rechercher des films, consulter leurs
+                  informations et filtrer les résultats.
+                </p>
+
+                <ul class="project-tech" aria-label="Technologies prévues">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>API</li>
+                </ul>
+
+                <div class="project-links">
+                  <span class="project-button project-button--primary">
+                    Bientôt disponible
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================
+     08 - SECTION PARCOURS
+================================================== -->
+
+      <section id="parcours">
+        <div class="journey-container">
+          <!-- 08.1 - En-tête -->
+          <div class="journey-header">
+            <span class="journey-label">MON HISTOIRE</span>
+
+            <h2>Mon parcours</h2>
+
+            <span class="journey-underline"></span>
+
+            <p>
+              Après plus de 20 ans dans le secteur automobile, j'ai choisi de me
+              reconvertir dans un domaine qui me passionne : le développement
+              web.
+            </p>
+          </div>
+
+          <!-- 08.2 - Frise chronologique -->
+          <div class="journey-timeline">
+            <!-- Étape 1 : Expérience professionnelle -->
+            <article class="journey-item">
+              <div class="journey-marker" aria-hidden="true">
+                <span>01</span>
+              </div>
+
+              <div class="journey-card">
+                <span class="journey-category">
+                  EXPÉRIENCE PROFESSIONNELLE
+                </span>
+
+                <h3>Plus de 20 ans dans l'automobile</h3>
+
+                <p>
+                  Mon expérience dans le secteur automobile m'a permis de
+                  développer des qualités essentielles : rigueur, autonomie,
+                  adaptabilité et esprit d'équipe.
+                </p>
+
+                <div class="journey-tags">
+                  <span>Rigueur</span>
+                  <span>Autonomie</span>
+                  <span>Travail en équipe</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Étape 2 : Reconversion -->
+            <article class="journey-item">
+              <div class="journey-marker" aria-hidden="true">
+                <span>02</span>
+              </div>
+
+              <div class="journey-card">
+                <span class="journey-category">
+                  RECONVERSION PROFESSIONNELLE
+                </span>
+
+                <h3>Formation Développeur Web et Web Mobile</h3>
+
+                <p>
+                  Aujourd'hui, je suis une formation DWWM pour apprendre à
+                  concevoir et développer des sites et applications web.
+                </p>
+
+                <p>
+                  Je développe mes compétences en HTML, CSS, JavaScript, PHP,
+                  Symfony et WordPress à travers des projets pratiques.
+                </p>
+
+                <div class="journey-tags">
+                  <span>HTML / CSS</span>
+                  <span>JavaScript</span>
+                  <span>PHP</span>
+                  <span>WordPress</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Étape 3 : Objectif -->
+            <article class="journey-item">
+              <div class="journey-marker" aria-hidden="true">
+                <span>03</span>
+              </div>
+
+              <div class="journey-card">
+                <span class="journey-category"> MON PROCHAIN OBJECTIF </span>
+
+                <h3>Intégrer une équipe de développement</h3>
+
+                <p>
+                  Je recherche actuellement un stage en développement web pour
+                  mettre mes connaissances en pratique, participer à des projets
+                  concrets et continuer à progresser auprès de professionnels.
+                </p>
+
+                <div class="journey-tags">
+                  <span>Recherche de stage</span>
+                  <span>Motivation</span>
+                  <span>Apprentissage</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+     
+<!-- ==================================================
+     09 - SECTION CONTACT
+================================================== -->
+
+<section id="contact">
+  <div class="contact-container">
+
+    <!-- 09.1 - En-tête -->
+    <div class="contact-header">
+      <span class="contact-label">CONTACT</span>
+
+      <h2>Travaillons ensemble !</h2>
+
+      <span class="contact-underline"></span>
+
+      <p>
+        Vous recherchez un stagiaire motivé en développement web ?
+        Je serais ravi d'échanger avec vous.
+      </p>
+    </div>
+
+    <!-- 09.2 - Contenu en deux colonnes -->
+    <div class="contact-grid">
+
+      <!-- Colonne gauche : présentation et coordonnées -->
+      <div class="contact-info">
+        <h3>Restons en contact</h3>
+
+        <p>
+          Actuellement en formation Développeur Web et Web Mobile,
+          je recherche un stage pour mettre mes compétences en
+          pratique et participer à des projets concrets.
+        </p>
+
+        <div class="contact-methods">
+
+          <a
+            class="contact-method"
+            href="mailto:kosnanskyfrancois@hotmail.fr"
+          >
+            <span class="contact-method-icon" aria-hidden="true">
+              ✉
+            </span>
+
+            <span class="contact-method-text">
+              <strong>Email</strong>
+              <span>kosnanskyfrancois@hotmail.fr</span>
+            </span>
+          </a>
+
+          <a
+            class="contact-method"
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="contact-method-icon" aria-hidden="true">
+              &lt;/&gt;
+            </span>
+
+            <span class="contact-method-text">
+              <strong>GitHub</strong>
+              <span>Découvrir mes projets</span>
+            </span>
+          </a>
+
+        </div>
+
+        <div class="contact-availability">
+          <span class="availability-dot" aria-hidden="true"></span>
+          <span>À la recherche d'un stage en développement web</span>
+        </div>
+      </div>
+
+      <!-- 09.3 - Colonne droite : formulaire -->
+      <form
+        class="contact-form"
+        id="contact-form"
+        action="mailto:kosnanskyfrancois@hotmail.fr"
+        method="post"
+        enctype="text/plain"
+      >
+        <h3>Envoyez-moi un message</h3>
+
+        <p class="contact-form-intro">
+          Une question ou une opportunité ?
+          N'hésitez pas à me contacter.
+        </p>
+
+        <div class="form-group">
+          <label for="contact-name">Votre nom</label>
+
+          <input
+            type="text"
+            id="contact-name"
+            name="Nom"
+            placeholder="Nom et prénom"
+            autocomplete="name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="contact-email">Votre email</label>
+
+          <input
+            type="email"
+            id="contact-email"
+            name="Email"
+            placeholder="exemple@email.com"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="contact-message">Votre message</label>
+
+          <textarea
+            id="contact-message"
+            name="Message"
+            rows="6"
+            placeholder="Écrivez votre message ici..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="contact-submit">
+          Préparer mon email
+          <span aria-hidden="true">➜</span>
+        </button>
+
+        <p class="contact-form-note">
+          Le bouton ouvre votre application de messagerie
+          pour préparer l'envoi.
+        </p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- ==================================================
+         10 - PIED DE PAGE
+         ================================================== -->
+    <footer>
+      <p>© 2026 - François</p>
+    </footer>
+  </body>
+</html>

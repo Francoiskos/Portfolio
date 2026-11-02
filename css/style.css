@@ -1,0 +1,1968 @@
+/* ==========================================================
+   PORTFOLIO - STYLE.CSS
+   Thème sombre et violet - version organisée et responsive
+   ========================================================== */
+
+/* ==================================================
+   01 - VARIABLES ET BASE
+   ================================================== */
+
+:root {
+  --bg-primary: #0a0b14;
+  --bg-secondary: #1b1f3b;
+  --color-primary: #7c3aed;
+  --color-secondary: #3b82f6;
+  --text-primary: #e5e7eb;
+  --text-secondary: #aeb5c7;
+  --border-color: #303650;
+  --header-height: 76px;
+  --container-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  padding-left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid #c4b5fd;
+  outline-offset: 4px;
+}
+
+/* ==================================================
+   02 - EN-TÊTE ET NAVIGATION
+   ================================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: var(--header-height);
+  background: rgba(10, 11, 20, 0.94);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+}
+
+.navbar {
+  max-width: var(--container-width);
+  min-height: var(--header-height);
+  margin: auto;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  color: #b59aff;
+  font-size: 23px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links a {
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: #b59aff;
+}
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 9px;
+  background: var(--bg-secondary);
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 5px 0;
+  background: #e5e7eb;
+  border-radius: 2px;
+}
+
+/* ==================================================
+   03 - ACCUEIL PANORAMIQUE
+   ================================================== */
+
+#accueil {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100svh - var(--header-height));
+  padding: 90px 30px;
+  background-color: var(--bg-primary);
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(8, 9, 22, 0.93) 0%,
+      rgba(8, 9, 22, 0.78) 33%,
+      rgba(8, 9, 22, 0.15) 72%
+    ),
+    url("../assets/images/portrait-setup.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  scroll-margin-top: var(--header-height);
+}
+
+/* ==================================================
+   03.1 - DISPOSITION TEXTE ET PORTRAIT
+   ================================================== */
+
+#accueil .hero-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  align-items: center;
+  gap: 70px;
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+#accueil .hero-content {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  max-width: 600px;
+}
+
+#accueil .intro {
+  margin-bottom: 18px;
+  color: #c4a5ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#accueil h1 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+#accueil .highlight {
+  display: block;
+  color: #a78bfa;
+}
+
+#accueil h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: clamp(19px, 2vw, 26px);
+  line-height: 1.35;
+}
+
+#accueil .description {
+  max-width: 560px;
+  margin-bottom: 28px;
+  color: #e1e4ed;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ==================================================
+   03.2 - BOUTONS DE L’ACCUEIL
+   ================================================== */
+
+#accueil .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+#accueil .hero-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 1px solid #a78bfa;
+  border-radius: 9px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+#accueil .hero-buttons a:hover {
+  transform: translateY(-3px);
+}
+
+#accueil .hero-buttons .btn-primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+#accueil .hero-buttons .btn-primary:hover {
+  background: #6d28d9;
+}
+
+#accueil .hero-buttons .btn-secondary {
+  background: rgba(8, 9, 22, 0.55);
+}
+
+#accueil .hero-buttons .btn-secondary:hover {
+  background: rgba(124, 58, 237, 0.24);
+}
+
+/* ==================================================
+   03.3 - BADGES DE L’ACCUEIL
+   ================================================== */
+
+#accueil .hero-infos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#accueil .hero-infos span {
+  padding: 8px 12px;
+  border: 1px solid rgba(167, 139, 250, 0.45);
+  border-radius: 30px;
+  background: rgba(8, 9, 22, 0.65);
+  color: #e7dcff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ==================================================
+   03.4 - CADRE DU PORTRAIT
+   ================================================== */
+
+#accueil .hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+#accueil .portrait-frame {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4/5;
+  padding: 5px;
+  overflow: hidden;
+  border: 2px solid #a855f7;
+  border-radius: 26px;
+  background: #160d29;
+  box-shadow:
+    0 0 18px rgba(168, 85, 247, 0.65),
+    0 0 45px rgba(124, 58, 237, 0.35);
+}
+
+#accueil .portrait-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 20px;
+}
+
+/* ==================================================
+   04 - STRUCTURE GÉNÉRALE DES AUTRES SECTIONS
+   ================================================== */
+
+main
+  section:not(#accueil):not(#apropos):not(#competences):not(#projets):not(
+    #parcours
+  ):not(#contact) {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 90px 30px;
+  scroll-margin-top: var(--header-height);
+}
+
+main
+  section:not(#accueil):not(#apropos):not(#competences):not(#projets):not(
+    #parcours
+  ):not(#contact)
+  > h2 {
+  margin-bottom: 30px;
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.2;
+}
+
+/* ==================================================
+   05 - SECTION À PROPOS
+   ================================================== */
+
+#apropos {
+  position: relative;
+  width: 100%;
+  padding: 100px 30px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 0% 0%,
+      rgba(124, 58, 237, 0.17),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      rgba(124, 58, 237, 0.15),
+      transparent 45%
+    ),
+    #090a17;
+  scroll-margin-top: var(--header-height);
+}
+
+#apropos .about-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+#apropos .about-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 65px;
+  text-align: center;
+}
+
+#apropos .about-label {
+  display: inline-block;
+  padding: 8px 22px;
+  border: 1px solid #a855f7;
+  border-radius: 12px;
+  color: #c084fc;
+  background: rgba(124, 58, 237, 0.08);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#apropos .about-header h2 {
+  margin: 0;
+  color: #f5f3ff;
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 1.15;
+}
+
+#apropos .about-underline {
+  width: 85px;
+  height: 5px;
+  border-radius: 10px;
+  background: #a855f7;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.5);
+}
+
+/* --------------------------------------------------
+   05.2 - MISE EN PAGE EN DEUX COLONNES
+   -------------------------------------------------- */
+
+#apropos .about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 50px;
+}
+
+/* --------------------------------------------------
+   05.3 - TEXTE DE PRÉSENTATION
+   -------------------------------------------------- */
+
+#apropos .about-presentation {
+  min-width: 0;
+}
+
+#apropos .about-presentation > h3 {
+  position: relative;
+  margin: 0 0 32px;
+  padding-left: 25px;
+  color: #f5f3ff;
+  font-size: clamp(25px, 2.5vw, 37px);
+  line-height: 1.25;
+}
+
+#apropos .about-presentation > h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 5px;
+  border-radius: 10px;
+  background: #a855f7;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+}
+
+#apropos .about-presentation > h3 span {
+  color: #c084fc;
+}
+
+#apropos .about-presentation > p {
+  margin-bottom: 20px;
+  color: #d1d5db;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+#apropos .about-presentation strong {
+  color: #fff;
+}
+
+#apropos .about-objective {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 35px;
+  padding: 22px;
+  border: 1px solid rgba(192, 132, 252, 0.7);
+  border-radius: 18px;
+  background: rgba(124, 58, 237, 0.1);
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.08);
+}
+
+#apropos .objective-icon {
+  flex-shrink: 0;
+  color: #c084fc;
+  font-size: 42px;
+  line-height: 1;
+}
+
+#apropos .about-objective p {
+  margin: 0;
+  color: #e5e7eb;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------
+   05.4 - CARTES À PROPOS
+   -------------------------------------------------- */
+
+#apropos .about-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+#apropos .about-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 26px;
+  border: 1px solid rgba(192, 132, 252, 0.65);
+  border-radius: 20px;
+  background: rgba(20, 16, 39, 0.75);
+  box-shadow:
+    0 0 20px rgba(124, 58, 237, 0.1),
+    inset 0 0 20px rgba(124, 58, 237, 0.03);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+#apropos .about-card:hover {
+  transform: translateY(-5px);
+  border-color: #c084fc;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+}
+
+#apropos .about-card-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(192, 132, 252, 0.15);
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.4),
+    rgba(76, 29, 149, 0.2)
+  );
+  color: #d8b4fe;
+  font-size: 40px;
+}
+
+#apropos .about-card-content {
+  min-width: 0;
+}
+
+#apropos .about-card-content h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+#apropos .about-card-content h4 {
+  margin: 0 0 12px;
+  color: #c084fc;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#apropos .about-card-content p {
+  margin: 0;
+  color: #d1d5db;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ==================================================
+   06 - SECTION COMPÉTENCES
+   ================================================== */
+
+#competences {
+  position: relative;
+  width: 100%;
+  padding: 100px 30px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 0% 0%,
+      rgba(124, 58, 237, 0.18),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      rgba(124, 58, 237, 0.15),
+      transparent 45%
+    ),
+    #090a17;
+  scroll-margin-top: var(--header-height);
+}
+
+#competences .skills-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+#competences .skills-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+#competences .skills-label {
+  padding: 8px 22px;
+  border: 1px solid #a855f7;
+  border-radius: 12px;
+  background: rgba(124, 58, 237, 0.08);
+  color: #c084fc;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#competences .skills-header h2 {
+  margin: 0;
+  color: #f5f3ff;
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 1.15;
+}
+
+#competences .skills-underline {
+  width: 85px;
+  height: 5px;
+  border-radius: 10px;
+  background: #a855f7;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.5);
+}
+
+#competences .skills-header p {
+  max-width: 750px;
+  margin: 0;
+  color: #d1d5db;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------
+   06.2 - GRILLE DES COMPÉTENCES
+   -------------------------------------------------- */
+
+#competences .skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#competences .skill-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  min-width: 0;
+  min-height: 210px;
+  padding: 28px;
+  border: 1px solid rgba(192, 132, 252, 0.65);
+  border-radius: 20px;
+  background: rgba(20, 16, 39, 0.8);
+  box-shadow:
+    0 0 20px rgba(124, 58, 237, 0.1),
+    inset 0 0 20px rgba(124, 58, 237, 0.03);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+#competences .skill-card:hover {
+  transform: translateY(-6px);
+  border-color: #c084fc;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+}
+
+#competences .skill-icon {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid rgba(192, 132, 252, 0.35);
+  border-radius: 14px;
+  object-fit: contain;
+}
+
+#competences .skill-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+#competences .skill-content h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+#competences .skill-content p {
+  margin: 0 0 16px;
+  color: #d1d5db;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+#competences .skill-tag {
+  display: inline-block;
+  margin-top: auto;
+  padding: 6px 12px;
+  border: 1px solid rgba(192, 132, 252, 0.35);
+  border-radius: 20px;
+  background: rgba(124, 58, 237, 0.15);
+  color: #d8b4fe;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------
+   06.3 - COMPÉTENCES COMPLÉMENTAIRES
+   -------------------------------------------------- */
+
+#competences .skills-extra {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 45px;
+}
+
+#competences .skills-extra span {
+  padding: 12px 20px;
+  border: 1px solid rgba(192, 132, 252, 0.6);
+  border-radius: 30px;
+  background: rgba(124, 58, 237, 0.08);
+  color: #e9ddff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ==================================================
+   07 - SECTION PROJETS
+   ================================================== */
+
+#projets {
+  position: relative;
+  width: 100%;
+  padding: 100px 30px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 0% 15%,
+      rgba(124, 58, 237, 0.18),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 100% 90%,
+      rgba(124, 58, 237, 0.16),
+      transparent 45%
+    ),
+    #090a17;
+  scroll-margin-top: var(--header-height);
+}
+
+#projets .projects-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+#projets .projects-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+#projets .projects-label {
+  padding: 8px 22px;
+  border: 1px solid #a855f7;
+  border-radius: 12px;
+  background: rgba(124, 58, 237, 0.08);
+  color: #c084fc;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#projets .projects-header h2 {
+  margin: 0;
+  color: #f5f3ff;
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 1.15;
+}
+
+#projets .projects-underline {
+  width: 85px;
+  height: 5px;
+  border-radius: 10px;
+  background: #a855f7;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.5);
+}
+
+#projets .projects-header p {
+  max-width: 750px;
+  margin: 0;
+  color: #d1d5db;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------
+   07.2 - GRILLE DES PROJETS
+   -------------------------------------------------- */
+
+#projets .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+#projets .project-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(192, 132, 252, 0.65);
+  border-radius: 20px;
+  background: rgba(20, 16, 39, 0.9);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.1);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+#projets .project-card:hover {
+  transform: translateY(-6px);
+  border-color: #c084fc;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.22);
+}
+
+/* --------------------------------------------------
+   07.3 - APERÇUS DES PROJETS
+   -------------------------------------------------- */
+
+#projets .project-preview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  min-height: 230px;
+  padding: 35px 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#projets .project-preview--tasks {
+  background: linear-gradient(135deg, #21103e, #422077);
+}
+
+#projets .project-preview--weather {
+  background: linear-gradient(135deg, #10244d, #5532a0);
+}
+
+#projets .project-preview--movies {
+  background: linear-gradient(135deg, #1d123d, #552079);
+}
+
+#projets .project-preview-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85px;
+  height: 85px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e9d5ff;
+  font-size: 48px;
+}
+
+#projets .project-status {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 7px 12px;
+  border: 1px solid rgba(216, 180, 254, 0.5);
+  border-radius: 20px;
+  background: rgba(9, 10, 23, 0.75);
+  color: #e9d5ff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------
+   07.4 - CONTENU DES CARTES
+   -------------------------------------------------- */
+
+#projets .project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 16px;
+  padding: 26px;
+}
+
+#projets .project-content h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+#projets .project-content p {
+  margin: 0;
+  color: #d1d5db;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+#projets .project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#projets .project-tech li {
+  padding: 7px 12px;
+  border: 1px solid rgba(192, 132, 252, 0.3);
+  border-radius: 20px;
+  background: rgba(124, 58, 237, 0.15);
+  color: #e9d5ff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------
+   07.5 - LIENS DES PROJETS
+   -------------------------------------------------- */
+
+#projets .project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+#projets .project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 45px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#projets .project-button--primary {
+  border: 1px solid rgba(192, 132, 252, 0.5);
+  background: rgba(124, 58, 237, 0.2);
+  color: #e9d5ff;
+}
+
+/* ==================================================
+   08 - SECTION PARCOURS
+   ================================================== */
+
+#parcours {
+  position: relative;
+  width: 100%;
+  padding: 100px 30px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 15% 20%,
+      rgba(124, 58, 237, 0.15),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 85% 85%,
+      rgba(124, 58, 237, 0.12),
+      transparent 45%
+    ),
+    #090a17;
+  scroll-margin-top: var(--header-height);
+}
+
+#parcours .journey-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+#parcours .journey-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 65px;
+  text-align: center;
+}
+
+#parcours .journey-label {
+  padding: 8px 22px;
+  border: 1px solid #a855f7;
+  border-radius: 12px;
+  background: rgba(124, 58, 237, 0.08);
+  color: #c084fc;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#parcours .journey-header h2 {
+  margin: 0;
+  color: #f5f3ff;
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 1.15;
+}
+
+#parcours .journey-underline {
+  width: 85px;
+  height: 5px;
+  border-radius: 10px;
+  background: #a855f7;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.5);
+}
+
+#parcours .journey-header p {
+  max-width: 750px;
+  margin: 0;
+  color: #d1d5db;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------
+   08.2 - FRISE CHRONOLOGIQUE
+   -------------------------------------------------- */
+
+#parcours .journey-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+#parcours .journey-timeline::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  bottom: 25px;
+  left: 26px;
+  width: 3px;
+  border-radius: 10px;
+  background: linear-gradient(
+    to bottom,
+    #a855f7,
+    #7c3aed,
+    rgba(124, 58, 237, 0.25)
+  );
+}
+
+/* --------------------------------------------------
+   08.3 - ÉTAPES DU PARCOURS
+   -------------------------------------------------- */
+
+#parcours .journey-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 55px minmax(0, 1fr);
+  gap: 25px;
+  align-items: start;
+}
+
+#parcours .journey-marker {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border: 2px solid #a855f7;
+  border-radius: 50%;
+  background: #281747;
+  color: #e9d5ff;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* --------------------------------------------------
+   08.4 - CARTES DU PARCOURS
+   -------------------------------------------------- */
+
+#parcours .journey-card {
+  min-width: 0;
+  padding: 30px;
+  border: 1px solid rgba(192, 132, 252, 0.55);
+  border-radius: 20px;
+  background: rgba(20, 16, 39, 0.9);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.08);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+#parcours .journey-card:hover {
+  transform: translateY(-5px);
+  border-color: #c084fc;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.18);
+}
+
+#parcours .journey-category {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #c084fc;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+#parcours .journey-card h3 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.3;
+}
+
+#parcours .journey-card p {
+  margin: 0 0 14px;
+  color: #d1d5db;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+#parcours .journey-card p:last-of-type {
+  margin-bottom: 20px;
+}
+
+/* --------------------------------------------------
+   08.5 - BADGES DU PARCOURS
+   -------------------------------------------------- */
+
+#parcours .journey-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#parcours .journey-tags span {
+  padding: 8px 13px;
+  border: 1px solid rgba(192, 132, 252, 0.35);
+  border-radius: 20px;
+  background: rgba(124, 58, 237, 0.15);
+  color: #e9d5ff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ==================================================
+   09 - SECTION CONTACT
+   ================================================== */
+
+#contact {
+  position: relative;
+  width: 100%;
+  padding: 100px 30px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 10% 15%,
+      rgba(124, 58, 237, 0.16),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 90% 85%,
+      rgba(168, 85, 247, 0.12),
+      transparent 45%
+    ),
+    #090a17;
+  scroll-margin-top: var(--header-height);
+}
+
+#contact .contact-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#contact .contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+#contact .contact-label {
+  padding: 8px 22px;
+  border: 1px solid #a855f7;
+  border-radius: 12px;
+  background: rgba(124, 58, 237, 0.08);
+  color: #c084fc;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#contact .contact-header h2 {
+  margin: 0;
+  color: #f5f3ff;
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 1.15;
+}
+
+#contact .contact-underline {
+  width: 85px;
+  height: 5px;
+  border-radius: 10px;
+  background: #a855f7;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.5);
+}
+
+#contact .contact-header p {
+  max-width: 750px;
+  margin: 0;
+  color: #d1d5db;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------
+   09.2 - DISPOSITION EN DEUX COLONNES
+   -------------------------------------------------- */
+
+#contact .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 50px;
+  align-items: start;
+}
+
+#contact .contact-info {
+  min-width: 0;
+  padding: 25px 0;
+}
+
+#contact .contact-info h3 {
+  margin: 0 0 22px;
+  color: #fff;
+  font-size: clamp(24px, 2.5vw, 32px);
+}
+
+#contact .contact-info > p {
+  max-width: 500px;
+  margin: 0 0 35px;
+  color: #d1d5db;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* --------------------------------------------------
+   09.3 - MOYENS DE CONTACT
+   -------------------------------------------------- */
+
+#contact .contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#contact .contact-method {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid rgba(192, 132, 252, 0.35);
+  border-radius: 16px;
+  background: rgba(20, 16, 39, 0.85);
+  color: #fff;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+#contact .contact-method:hover {
+  transform: translateY(-4px);
+  border-color: #c084fc;
+  background: rgba(40, 23, 71, 0.9);
+}
+
+#contact .contact-method-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 55px;
+  height: 55px;
+  border: 1px solid rgba(192, 132, 252, 0.45);
+  border-radius: 14px;
+  background: rgba(124, 58, 237, 0.2);
+  color: #d8b4fe;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+#contact .contact-method-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+#contact .contact-method-text strong {
+  color: #fff;
+  font-size: 16px;
+}
+
+#contact .contact-method-text span {
+  overflow-wrap: anywhere;
+  color: #c4b5fd;
+  font-size: 14px;
+}
+
+/* --------------------------------------------------
+   09.4 - DISPONIBILITÉ
+   -------------------------------------------------- */
+
+#contact .contact-availability {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+  padding: 16px 18px;
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  border-radius: 12px;
+  background: rgba(34, 197, 94, 0.06);
+  color: #d1fae5;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#contact .availability-dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 12px rgba(74, 222, 128, 0.5);
+}
+
+/* --------------------------------------------------
+   09.5 - FORMULAIRE
+   -------------------------------------------------- */
+
+#contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+  padding: 35px;
+  border: 1px solid rgba(192, 132, 252, 0.55);
+  border-radius: 20px;
+  background: rgba(20, 16, 39, 0.95);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.15),
+    0 0 25px rgba(124, 58, 237, 0.08);
+}
+
+#contact .contact-form h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 25px;
+}
+
+#contact .contact-form-intro {
+  margin: 0;
+  color: #d1d5db;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------
+   09.6 - CHAMPS DU FORMULAIRE
+   -------------------------------------------------- */
+
+#contact .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contact .form-group label {
+  color: #e9d5ff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#contact .form-group input,
+#contact .form-group textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid rgba(192, 132, 252, 0.3);
+  border-radius: 10px;
+  background: #0e0b1c;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  outline: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+#contact .form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+#contact .form-group input::placeholder,
+#contact .form-group textarea::placeholder {
+  color: #8e83a5;
+}
+
+#contact .form-group input:focus,
+#contact .form-group textarea:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.15);
+}
+
+/* --------------------------------------------------
+   09.7 - BOUTON D’ENVOI
+   -------------------------------------------------- */
+
+#contact .contact-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 50px;
+  padding: 14px 22px;
+  border: 1px solid #7c3aed;
+  border-radius: 10px;
+  background: #7c3aed;
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+#contact .contact-submit:hover {
+  transform: translateY(-3px);
+  background: #6d28d9;
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+}
+
+#contact .contact-form-note {
+  margin: 0;
+  color: #a1a1aa;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ==================================================
+   10 - PIED DE PAGE
+   ================================================== */
+
+footer {
+  padding: 28px 20px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+
+footer p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+/* ==================================================
+   11 - RESPONSIVE TABLETTE
+   ================================================== */
+
+@media (max-width: 1000px) {
+  #apropos,
+  #competences,
+  #projets {
+    padding: 80px 25px;
+  }
+
+  /* --------------------------------------------------
+   05.2 - MISE EN PAGE EN DEUX COLONNES
+   -------------------------------------------------- */
+
+  #apropos .about-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  #apropos .about-header {
+    margin-bottom: 50px;
+  }
+
+  #competences .skills-list,
+  #projets .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  #accueil {
+    min-height: 850px;
+    align-items: flex-start;
+    padding: 75px 30px 330px;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(8, 9, 22, 0.94) 0%,
+        rgba(8, 9, 22, 0.8) 48%,
+        rgba(8, 9, 22, 0.1) 100%
+      ),
+      url("../assets/images/portrait-setup.png");
+    background-position:
+      center,
+      65% bottom;
+  }
+
+  #accueil .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  #accueil .hero-visual {
+    justify-content: center;
+  }
+
+  #accueil .portrait-frame {
+    max-width: 280px;
+  }
+
+  #parcours,
+  #contact {
+    padding: 80px 25px;
+  }
+
+  #parcours .journey-header {
+    margin-bottom: 50px;
+  }
+
+  /* --------------------------------------------------
+   08.4 - CARTES DU PARCOURS
+   -------------------------------------------------- */
+
+  #parcours .journey-card {
+    padding: 25px;
+  }
+
+  /* --------------------------------------------------
+   09.2 - DISPOSITION EN DEUX COLONNES
+   -------------------------------------------------- */
+
+  #contact .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  #contact .contact-info {
+    padding: 0;
+  }
+
+  /* --------------------------------------------------
+   09.5 - FORMULAIRE
+   -------------------------------------------------- */
+
+  #contact .contact-form {
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+}
+
+/* ==================================================
+   12 - MENU MOBILE
+   ================================================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px 20px 20px;
+    background: #111323;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  .nav-links.active,
+  .nav-links.open,
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links li {
+    list-style: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 8px;
+  }
+
+  main
+    section:not(#accueil):not(#apropos):not(#competences):not(#projets):not(
+      #parcours
+    ):not(#contact) {
+    padding: 70px 22px;
+  }
+}
+
+/* ==================================================
+   13 - RESPONSIVE MOBILE ET PETITS ÉCRANS
+   ================================================== */
+
+@media (max-width: 650px) {
+  #apropos,
+  #competences,
+  #projets,
+  #parcours,
+  #contact {
+    padding: 65px 20px;
+  }
+
+  #apropos .about-header,
+  #competences .skills-header,
+  #projets .projects-header,
+  #contact .contact-header {
+    margin-bottom: 40px;
+  }
+
+  #apropos .about-presentation > h3 {
+    font-size: 25px;
+  }
+
+  #apropos .about-presentation > p {
+    font-size: 15px;
+  }
+
+  #apropos .about-card {
+    align-items: flex-start;
+    gap: 15px;
+    padding: 18px;
+  }
+
+  #apropos .about-card-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 13px;
+    font-size: 27px;
+  }
+
+  #apropos .about-card-content h3 {
+    font-size: 17px;
+  }
+
+  #apropos .about-card-content h4 {
+    font-size: 14px;
+  }
+
+  #apropos .about-card-content p {
+    font-size: 13px;
+  }
+
+  #apropos .about-objective {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  #apropos .objective-icon {
+    font-size: 32px;
+  }
+
+  #competences .skills-header p,
+  #projets .projects-header p,
+  #parcours .journey-header p,
+  #contact .contact-header p {
+    font-size: 14px;
+  }
+
+  #competences .skills-list,
+  #projets .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  #competences .skill-card {
+    min-height: auto;
+    padding: 22px;
+    gap: 18px;
+  }
+
+  #competences .skill-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  #competences .skill-content h3 {
+    font-size: 20px;
+  }
+
+  /* --------------------------------------------------
+   06.3 - COMPÉTENCES COMPLÉMENTAIRES
+   -------------------------------------------------- */
+
+  #competences .skills-extra {
+    gap: 10px;
+    margin-top: 35px;
+  }
+
+  #competences .skills-extra span {
+    padding: 9px 14px;
+    font-size: 12px;
+  }
+
+  /* --------------------------------------------------
+   07.3 - APERÇUS DES PROJETS
+   -------------------------------------------------- */
+
+  #projets .project-preview {
+    min-height: 200px;
+  }
+
+  /* --------------------------------------------------
+   07.4 - CONTENU DES CARTES
+   -------------------------------------------------- */
+
+  #projets .project-content {
+    padding: 22px;
+  }
+
+  #projets .project-content h3 {
+    font-size: 21px;
+  }
+
+  /* --------------------------------------------------
+   08.2 - FRISE CHRONOLOGIQUE
+   -------------------------------------------------- */
+
+  #parcours .journey-timeline {
+    gap: 22px;
+  }
+
+  #parcours .journey-timeline::before {
+    left: 19px;
+  }
+
+  /* --------------------------------------------------
+   08.3 - ÉTAPES DU PARCOURS
+   -------------------------------------------------- */
+
+  #parcours .journey-item {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  #parcours .journey-marker {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  /* --------------------------------------------------
+   08.4 - CARTES DU PARCOURS
+   -------------------------------------------------- */
+
+  #parcours .journey-card {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  #parcours .journey-card h3 {
+    font-size: 20px;
+  }
+
+  #parcours .journey-card p {
+    font-size: 14px;
+  }
+
+  /* --------------------------------------------------
+   08.5 - BADGES DU PARCOURS
+   -------------------------------------------------- */
+
+  #parcours .journey-tags {
+    gap: 8px;
+  }
+
+  #parcours .journey-tags span {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  #contact .contact-info > p {
+    font-size: 14px;
+  }
+
+  #contact .contact-method {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  #contact .contact-method-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 19px;
+  }
+
+  #contact .contact-method-text span {
+    font-size: 12px;
+  }
+
+  /* --------------------------------------------------
+   09.5 - FORMULAIRE
+   -------------------------------------------------- */
+
+  #contact .contact-form {
+    padding: 22px;
+    border-radius: 15px;
+  }
+
+  #contact .contact-form h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 520px) {
+  #accueil {
+    min-height: 830px;
+    padding: 65px 20px 90px;
+    background-position:
+      center,
+      66% bottom;
+  }
+
+  #accueil .hero-container {
+    gap: 32px;
+  }
+
+  #accueil .intro {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  #accueil h1 {
+    font-size: clamp(36px, 10vw, 44px);
+  }
+
+  #accueil h2 {
+    font-size: 19px;
+  }
+
+  #accueil .description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  #accueil .hero-buttons a {
+    width: 100%;
+  }
+
+  #accueil .hero-infos {
+    gap: 8px;
+  }
+
+  #accueil .hero-infos span {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  #accueil .portrait-frame {
+    max-width: 240px;
+  }
+}
+
+/* ==================================================
+   14 - ACCESSIBILITÉ
+   ================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+
+  #accueil .hero-buttons a:hover,
+  #apropos .about-card:hover,
+  #competences .skill-card:hover,
+  #projets .project-card:hover,
+  #parcours .journey-card:hover,
+  #contact .contact-method:hover,
+  #contact .contact-submit:hover {
+    transform: none;
+  }
+}
